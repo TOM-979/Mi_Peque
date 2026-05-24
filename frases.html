@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000">
+    <title>Mi Universo 💖</title>
+    <link rel="stylesheet" href="css/frases.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="menu.html" class="back-btn" aria-label="volver">←</a>
+
+    <div class="stars" id="stars"></div>
+
+    <div class="scene">
+        <!-- Orbiting phrases (positioned by JS) -->
+        <div class="orbit-stage" id="orbitStage"></div>
+
+        <!-- 3D extruded heart in the center, rotated together with the camera -->
+        <div class="heart-system" id="heartSystem">
+            <div class="heart-glow"></div>
+            <div class="heart-3d" id="heart3d"></div>
+        </div>
+    </div>
+
+    <div class="vignette"></div>
+
+    <p class="drag-hint" id="hint">✨ Arrastra para girar el universo ✨</p>
+
+    <script src="js/frases.js"></script>
+    <script src="js/music.js"></script>
+    <script>startMusic('universo');</script>
+</body>
+</html>

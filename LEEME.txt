@@ -1,0 +1,90 @@
+==============================================
+   PARA MI PEQUE - GUIA RAPIDA
+==============================================
+
+ESTRUCTURA DEL PROYECTO:
+
+  index.html      → Pantalla de bloqueo (contraseña 01-01-26)
+  menu.html       → Menú con las 3 secciones
+  carta.html      → Placeholder de la carta (lo dejamos para el final)
+  album.html      → Álbum 3D giratorio con tus fotos
+  frases.html     → Planeta tipo Saturno con frases flotando
+
+  css/            → estilos
+  js/             → lógica
+  img/album/      → AQUÍ VAS A METER LAS FOTOS
+
+
+==============================================
+   COMO PROBARLO LOCAL (EN TU PC)
+==============================================
+
+OPCIÓN 1 - Doble clic:
+  Abre "index.html" con doble clic. Funcionará casi todo,
+  pero algunos navegadores bloquean cosas si lo abres así.
+
+OPCIÓN 2 - Servidor local (RECOMENDADO):
+  Si tienes Python instalado, abre PowerShell en esta carpeta y corre:
+    python -m http.server 8000
+  Luego abre en el navegador:  http://localhost:8000
+
+  Para probar desde tu celular (estando en la misma WiFi):
+  1. En tu PC ejecuta el comando de arriba
+  2. Saca tu IP con:  ipconfig  (busca "IPv4")
+  3. En el cel ve a: http://TU_IP:8000
+
+
+==============================================
+   COMO AGREGAR LAS FOTOS DEL ALBUM
+==============================================
+
+1. Mete tus fotos en la carpeta:  img/album/
+2. Renómbralas como:  foto1.jpg, foto2.jpg, foto3.jpg, ...
+   (hasta foto10.jpg)
+
+Si tienes MÁS o MENOS de 10 fotos:
+  Abre  js/album.js  y edita la lista "PHOTOS" arriba.
+  Solo agrega o quita líneas con el nombre de cada foto.
+
+Funcionan formatos: jpg, png, webp
+  (si usas .png, asegúrate que en album.js el nombre coincida)
+
+Mientras no haya foto, sale un emoji rosado bonito de relleno.
+
+
+==============================================
+   COMO CAMBIAR LAS FRASES DEL PLANETA
+==============================================
+
+Abre  js/frases.js  y edita el array PHRASES arriba.
+Cada frase es: { t: 'tu frase', e: '🌟' }
+
+
+==============================================
+   COMO PUBLICARLO EN dedicapag.pro
+   (o cualquier hosting)
+==============================================
+
+Sube TODA la carpeta tal cual (con index.html en la raíz)
+al hosting. Eso es todo.
+
+Opciones gratis para probar online:
+- Netlify Drop:  https://app.netlify.com/drop
+  (arrastra la carpeta entera y te da un link)
+- Vercel
+- GitHub Pages
+
+
+==============================================
+   CONTRASEÑA
+==============================================
+
+DD = 01    (día)
+MM = 01    (mes)
+AA = 26    (año)
+
+Las flechitas arriba/abajo cambian cada número.
+Mantén apretado para ir más rápido.
+
+
+💗 ¡Suerte con tu detalle!

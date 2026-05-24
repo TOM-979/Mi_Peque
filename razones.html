@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a0820">
+    <title>100 + 1 Razones 💖</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/razones.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="menu.html" class="back-btn" aria-label="volver">←</a>
+    <div class="petals" id="petals"></div>
+
+    <!-- Floating progress counter -->
+    <div class="razones-counter" id="razonesCounter">
+        <span id="counterCurrent">0</span><span class="sep">/</span><span>100</span>
+    </div>
+
+    <main class="razones-page">
+        <header class="razones-header">
+            <p class="razones-eyebrow">— Mis 100 razones —</p>
+            <h1 class="razones-title">para quedarme<br><span>contigo</span></h1>
+            <p class="razones-sub">+ 1 razón para que te quedes tú conmigo 💗</p>
+        </header>
+
+        <ol class="razones-list" id="razonesList"></ol>
+
+        <!-- The bonus reason — special finale -->
+        <section class="bonus-reason">
+            <div class="bonus-shine"></div>
+            <div class="bonus-badge">+ 1</div>
+            <div class="bonus-hearts">
+                <span>💗</span>
+                <span>💖</span>
+                <span>💗</span>
+            </div>
+            <h2 class="bonus-title">Y una razón<br>para que te quedes conmigo</h2>
+            <p class="bonus-text">
+                Porque aunque no sea perfecto, siempre voy a intentar darte
+                un <strong>amor sincero</strong>, un <strong>lugar seguro</strong>
+                y una <strong>mano que nunca quiera soltarte</strong>,
+                incluso en tus peores días.
+            </p>
+            <div class="bonus-signature">💖</div>
+        </section>
+
+        <p class="razones-foot">
+            …y todavía me quedan razones por descubrir contigo, mi Peque ✨
+        </p>
+    </main>
+
+    <script src="js/menu.js"></script>
+    <script src="js/razones.js"></script>
+    <script src="js/music.js"></script>
+    <script>startMusic('razones');</script>
+</body>
+</html>

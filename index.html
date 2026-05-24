@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#ff8fb1">
+    <title>Para Mi Amor 💖</title>
+    <link rel="stylesheet" href="css/lock.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background layers -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+    <div class="sparkles" id="sparkles"></div>
+    <div class="hearts-bg" id="heartsBg"></div>
+
+    <div class="lock-container">
+        <div class="lock" id="lock">
+            <!-- Shackle (top metal arch) -->
+            <div class="shackle">
+                <div class="shackle-shine"></div>
+            </div>
+
+            <!-- Lock body -->
+            <div class="lock-body">
+                <div class="body-glare"></div>
+                <span class="corner-heart top-left">💗</span>
+                <span class="corner-heart top-right">💗</span>
+
+                <div class="dials">
+                    <div class="dial">
+                        <button class="arrow up" data-index="0" data-dir="1" aria-label="subir">▲</button>
+                        <div class="dial-window">
+                            <div class="dial-track" id="track-0">
+                                <span class="dial-num">00</span>
+                            </div>
+                            <div class="dial-glare"></div>
+                        </div>
+                        <button class="arrow down" data-index="0" data-dir="-1" aria-label="bajar">▼</button>
+                    </div>
+                    <div class="dial">
+                        <button class="arrow up" data-index="1" data-dir="1" aria-label="subir">▲</button>
+                        <div class="dial-window">
+                            <div class="dial-track" id="track-1">
+                                <span class="dial-num">00</span>
+                            </div>
+                            <div class="dial-glare"></div>
+                        </div>
+                        <button class="arrow down" data-index="1" data-dir="-1" aria-label="bajar">▼</button>
+                    </div>
+                    <div class="dial">
+                        <button class="arrow up" data-index="2" data-dir="1" aria-label="subir">▲</button>
+                        <div class="dial-window">
+                            <div class="dial-track" id="track-2">
+                                <span class="dial-num">00</span>
+                            </div>
+                            <div class="dial-glare"></div>
+                        </div>
+                        <button class="arrow down" data-index="2" data-dir="-1" aria-label="bajar">▼</button>
+                    </div>
+                </div>
+
+                <p class="status" id="status">Hola mi Peque ❤️</p>
+            </div>
+        </div>
+
+        <!-- Naru the cat with speech bubble (clickable for hint) -->
+        <div class="naru-wrap">
+            <div class="bubble" id="naruBubble">
+                <span id="bubbleText">¿Quieres una pista Mami? Si es así presióname, soy Naru bb 🐱💗</span>
+                <div class="bubble-tail"></div>
+            </div>
+
+            <button class="naru-cat" id="naruCat" aria-label="Naru, dame una pista">
+                <svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+                    <!-- ears outer -->
+                    <path d="M20 50 L28 22 L42 48 Z" fill="#fff5e6" stroke="#8b3a5d" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M68 48 L82 22 L90 50 Z" fill="#fff5e6" stroke="#8b3a5d" stroke-width="2" stroke-linejoin="round"/>
+                    <!-- ears inner -->
+                    <path d="M28 44 L32 30 L38 44 Z" fill="#ffb3c6"/>
+                    <path d="M72 44 L78 30 L82 44 Z" fill="#ffb3c6"/>
+                    <!-- head -->
+                    <ellipse cx="55" cy="62" rx="34" ry="30" fill="#fff5e6" stroke="#8b3a5d" stroke-width="2"/>
+                    <!-- forehead patch (pink) -->
+                    <ellipse cx="55" cy="48" rx="14" ry="6" fill="#ffd0e0" opacity="0.6"/>
+                    <!-- eyes -->
+                    <ellipse class="cat-eye" cx="42" cy="60" rx="4.2" ry="5.5" fill="#3d1d2a"/>
+                    <ellipse class="cat-eye" cx="68" cy="60" rx="4.2" ry="5.5" fill="#3d1d2a"/>
+                    <circle cx="43.5" cy="58" r="1.4" fill="#fff"/>
+                    <circle cx="69.5" cy="58" r="1.4" fill="#fff"/>
+                    <!-- nose -->
+                    <path d="M51 70 L59 70 L55 74 Z" fill="#ff6b9d" stroke="#8b3a5d" stroke-width="0.8" stroke-linejoin="round"/>
+                    <!-- mouth -->
+                    <path d="M55 74 Q50 80 46 76" stroke="#3d1d2a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                    <path d="M55 74 Q60 80 64 76" stroke="#3d1d2a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                    <!-- whiskers -->
+                    <line x1="14" y1="66" x2="36" y2="68" stroke="#3d1d2a" stroke-width="1" stroke-linecap="round"/>
+                    <line x1="14" y1="72" x2="36" y2="72" stroke="#3d1d2a" stroke-width="1" stroke-linecap="round"/>
+                    <line x1="74" y1="68" x2="96" y2="66" stroke="#3d1d2a" stroke-width="1" stroke-linecap="round"/>
+                    <line x1="74" y1="72" x2="96" y2="72" stroke="#3d1d2a" stroke-width="1" stroke-linecap="round"/>
+                    <!-- blush -->
+                    <ellipse cx="32" cy="72" rx="5" ry="3" fill="#ff8ab0" opacity="0.6"/>
+                    <ellipse cx="78" cy="72" rx="5" ry="3" fill="#ff8ab0" opacity="0.6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/lock.js"></script>
+    <script src="js/music.js"></script>
+    <script>startMusic('menu');</script>
+</body>
+</html>

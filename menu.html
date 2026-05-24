@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a0820">
+    <title>Para Mi Peque 💖</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="petals" id="petals"></div>
+
+    <main class="menu">
+        <h1 class="title">Bienvenida<br><span>mi amor</span></h1>
+        <p class="subtitle">Elige una sorpresa 💌</p>
+
+        <div class="cards">
+            <a href="carta.html" class="card card-letter">
+                <div class="card-icon">💌</div>
+                <div class="card-text">
+                    <h2>Mi Carta</h2>
+                    <p>Palabras desde el corazón</p>
+                </div>
+            </a>
+
+            <a href="album.html" class="card card-album">
+                <div class="card-icon">📸</div>
+                <div class="card-text">
+                    <h2>Nuestro Álbum</h2>
+                    <p>Recuerdos que giran sin fin</p>
+                </div>
+            </a>
+
+            <a href="frases.html" class="card card-stars">
+                <div class="card-icon">🪐</div>
+                <div class="card-text">
+                    <h2>Mi Universo</h2>
+                    <p>Todo lo que eres para mí</p>
+                </div>
+            </a>
+
+            <a href="razones.html" class="card card-reasons">
+                <div class="card-icon">💯</div>
+                <div class="card-text">
+                    <h2>100 + 1 Razones</h2>
+                    <p>100 mías para quedarme y 1 para que te quede conmigo 💗</p>
+                </div>
+            </a>
+
+            <button type="button" class="card card-locked" id="lockedCard">
+                <div class="card-icon">🎁</div>
+                <div class="card-text">
+                    <h2>01/01/06</h2>
+                    <p>Una sorpresa muy especial 🔒</p>
+                </div>
+            </button>
+        </div>
+
+        <p class="foot">Esos ojos Cafes💗</p>
+    </main>
+
+    <!-- Romantic modal for the locked section -->
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+        <div class="modal-card" role="dialog" aria-modal="true">
+            <div class="modal-icon">💝</div>
+            <h3 class="modal-title">Aún no, mi amor</h3>
+            <p class="modal-text">
+                Esta sorpresa la guardé especialmente para el<br>
+                <strong>01 / 01 / 06</strong> ✨<br><br>
+                Cada día que pasa nos acerca un poquito más a ese momento.<br>
+                Ten paciencia, vale? Te va a encantar 💗
+            </p>
+            <button type="button" class="modal-close" id="modalClose">Está bien 💕</button>
+        </div>
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/music.js"></script>
+    <script>startMusic('menu');</script>
+</body>
+</html>
