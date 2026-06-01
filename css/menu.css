@@ -141,6 +141,24 @@ html, body {
     50%      { transform: translateY(-4px) rotate(8deg);  opacity: 1; }
 }
 
+/* Recuadro de sorpresa YA DISPONIBLE — brillo dorado que invita a tocar */
+.card-locked.unlocked-card {
+    background: linear-gradient(135deg, #b81f5c 0%, #6b1a45 60%, #7a4a12 100%);
+    border: 1px solid rgba(255, 215, 150, 0.55);
+    animation: surpriseGlow 2.2s ease-in-out infinite;
+}
+.card-locked.unlocked-card .card-icon {
+    animation: giftWiggle 1.6s ease-in-out infinite;
+}
+@keyframes surpriseGlow {
+    0%, 100% { box-shadow: 0 10px 30px rgba(0,0,0,0.35), 0 0 0 0 rgba(255, 200, 120, 0.5), inset 0 1px 0 rgba(255,255,255,0.2); }
+    50%      { box-shadow: 0 14px 38px rgba(0,0,0,0.4), 0 0 22px 4px rgba(255, 200, 120, 0.55), inset 0 1px 0 rgba(255,255,255,0.25); }
+}
+@keyframes giftWiggle {
+    0%, 100% { transform: rotate(-6deg) scale(1); }
+    50%      { transform: rotate(6deg)  scale(1.08); }
+}
+
 .card-icon {
     font-size: 38px;
     width: 60px;

@@ -46,6 +46,9 @@ function render(i) {
     track.classList.remove('bump');
     void track.offsetWidth;
     track.classList.add('bump');
+    // mantener el campo de escritura sincronizado (si no lo estás escribiendo ahora)
+    const inp = document.getElementById('input-' + i);
+    if (inp && document.activeElement !== inp) inp.value = pad(values[i]);
 }
 
 function check() {
@@ -70,20 +73,24 @@ function check() {
     }
 }
 
+// One step on a dial (dir = +1 / -1)
+function step(i, dir) {
+    values[i] = (values[i] + dir + 100) % 100;
+    render(i);
+    check();
+}
+
+// --- Arrows (tap) ---
 document.querySelectorAll('.arrow').forEach(btn => {
     btn.addEventListener('click', () => {
-        const i = parseInt(btn.dataset.index);
-        const dir = parseInt(btn.dataset.dir);
-        values[i] = (values[i] + dir + 100) % 100;
-        render(i);
-        check();
+        step(parseInt(btn.dataset.index), parseInt(btn.dataset.dir));
     });
 });
 
 [0, 1, 2].forEach(render);
 statusEl.textContent = GREETING;
 
-// Long-press to scroll faster through numbers
+// --- Long-press on arrows to scroll faster ---
 document.querySelectorAll('.arrow').forEach(btn => {
     let timer = null, interval = null;
     const start = (e) => {
@@ -97,6 +104,36 @@ document.querySelectorAll('.arrow').forEach(btn => {
     btn.addEventListener('mouseleave', stop);
     btn.addEventListener('touchend', stop);
     btn.addEventListener('touchcancel', stop);
+});
+
+// --- Escribir la fecha con el teclado ---
+// Toca un número y escríbelo (en el celular sale el teclado numérico).
+// Al completar 2 dígitos salta solito al siguiente.
+document.querySelectorAll('.dial-input').forEach(inp => {
+    const i = parseInt(inp.dataset.index);
+
+    // al tocar/enfocar, selecciona para escribir encima del 00
+    inp.addEventListener('focus', () => inp.select());
+
+    inp.addEventListener('input', () => {
+        const digits = inp.value.replace(/\D/g, '').slice(0, 2);
+        inp.value = digits;
+        values[i] = digits === '' ? 0 : parseInt(digits, 10);
+        render(i);
+        check();
+        if (digits.length === 2) {
+            const next = document.getElementById('input-' + (i + 1));
+            if (next) next.focus();
+            else inp.blur();
+        }
+    });
+
+    // al salir del campo, deja el número con sus 2 dígitos (ej. 1 -> 01)
+    inp.addEventListener('blur', () => { inp.value = pad(values[i]); });
+
+    inp.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { inp.blur(); check(); }
+    });
 });
 
 // ===== Naru the cat — hint toggle =====

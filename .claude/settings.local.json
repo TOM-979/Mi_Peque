@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(mkdir -p \"c:/Users/TOM/OneDrive/Desktop/Para mi Peque/css\" \"c:/Users/TOM/OneDrive/Desktop/Para mi Peque/js\" \"c:/Users/TOM/OneDrive/Desktop/Para mi Peque/img\" \"c:/Users/TOM/OneDrive/Desktop/Para mi Peque/img/album\")",
-      "PowerShell(Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -notmatch 'Loopback' -and $_.IPAddress -notmatch '^169\\\\.' } | Select-Object IPAddress, InterfaceAlias | Format-Table -AutoSize)"
+      "PowerShell(Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -notmatch 'Loopback' -and $_.IPAddress -notmatch '^169\\\\.' } | Select-Object IPAddress, InterfaceAlias | Format-Table -AutoSize)",
+      "Bash(node --check js/ramo.js)"
     ],
     "additionalDirectories": [
       "c:\\Users\\TOM\\OneDrive\\Desktop\\Para mi Peque"

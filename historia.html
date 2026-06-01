@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#1a0820">
+    <title>Nuestra Historia 💗</title>
+    <link rel="stylesheet" href="css/sorpresa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="petals" id="petals"></div>
+
+    <section class="view">
+        <a href="sorpresa.html" class="back-btn" aria-label="volver">←</a>
+
+        <header class="tl-head">
+            <p class="tl-eyebrow">— Nuestra historia —</p>
+            <h2 class="tl-title">Cada momento<br><span>contigo</span></h2>
+            <p class="tl-intro">Desliza hacia abajo y revive nuestro caminito 💞</p>
+        </header>
+
+        <div class="timeline" id="timeline"></div>
+
+        <p class="tl-foot">…y lo que falta por escribir, lo escribimos juntos ✨</p>
+    </section>
+
+    <!-- Detalle de un momento: foto al 100% + texto debajo -->
+    <div class="tl-detail" id="tlDetail" hidden>
+        <button type="button" class="back-btn" id="detailBack" aria-label="volver">←</button>
+        <div class="tl-detail-inner">
+            <div class="tl-detail-media" id="detailMedia">
+                <img id="detailImg" src="" alt="">
+            </div>
+            <span class="tl-date" id="detailDate"></span>
+            <h3 id="detailTitle"></h3>
+            <p id="detailText"></p>
+        </div>
+    </div>
+
+    <script src="js/historia.js"></script>
+    <script src="js/page.js"></script>
+    <script>pageMusic('menu');</script>
+</body>
+</html>

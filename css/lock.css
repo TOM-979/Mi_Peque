@@ -305,6 +305,24 @@ html, body {
     pointer-events: none;
 }
 
+/* Campo invisible para ESCRIBIR el número (el número visible es el .dial-num) */
+.dial-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: transparent;        /* lo que se ve es el .dial-num de atrás */
+    caret-color: #fff5e0;
+    text-align: center;
+    font: inherit;
+    cursor: text;
+    z-index: 4;
+    touch-action: manipulation;
+}
+
 .dial-track.bump { animation: dialBump 0.3s ease; }
 @keyframes dialBump {
     0%   { transform: translateY(0); }
@@ -313,7 +331,7 @@ html, body {
     100% { transform: translateY(0); opacity: 1; }
 }
 
-/* Arrows */
+/* Arrows (igual que antes) */
 .arrow {
     background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
     border: 1px solid rgba(255, 255, 255, 0.25);

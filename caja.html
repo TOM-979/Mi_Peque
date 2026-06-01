@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#1a0820">
+    <title>Caja Sorpresa 🎁</title>
+    <link rel="stylesheet" href="css/sorpresa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Caveat:wght@500;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="petals" id="petals"></div>
+
+    <section class="view">
+        <a href="sorpresa.html" class="back-btn" aria-label="volver">←</a>
+
+        <div class="gift-stage" id="giftStage">
+            <div class="gift" id="giftBox" role="button" tabindex="0" aria-label="abrir la caja">
+                <div class="gift-glow"></div>
+                <div class="gift-base">
+                    <span class="ribbon-v"></span>
+                </div>
+                <div class="gift-lid">
+                    <span class="ribbon-v"></span>
+                    <div class="bow">
+                        <span class="bow-l"></span>
+                        <span class="bow-r"></span>
+                        <span class="bow-knot"></span>
+                    </div>
+                </div>
+                <p class="gift-tap">Tócame 🎁</p>
+            </div>
+
+            <div class="reveal" id="reveal" hidden>
+                <p class="reveal-msg" id="revealMsg">Para ti, mi peque 💗</p>
+
+                <div class="video-frame">
+                    <video id="giftVideo" playsinline controls preload="metadata"></video>
+                </div>
+                <button type="button" class="switch-video" id="switchVideo">🎬 Ver otro video</button>
+
+                <!-- Carta dentro de la caja -->
+                <article class="mini-carta" id="miniCarta">
+                    <div class="mc-corner tl">💗</div>
+                    <div class="mc-corner tr">💗</div>
+                    <div class="mc-corner bl">💗</div>
+                    <div class="mc-corner br">💗</div>
+
+                    <h2 class="mc-title">Feliz 6 meses, mi peque 💌</h2>
+                    <div class="mc-body">
+                        <p>
+                            Si llegaste hasta aquí es porque hoy cumplimos 6 meses, mi peque,
+                            y quería darte algo más que un video: estas palabras guardadas
+                            justo dentro de esta cajita 🎁.
+                        </p>
+                        <p>
+                            Pensar que todo empezó por un mensaje que me ignoraste como 3
+                            semanas jajaja… y míranos ahora. Desde nuestras escapadas de fin
+                            de semana, el primer beso en la playa, la tarde peleando con los
+                            legos, hasta las noches jugando o en llamada por horas: cada
+                            momento contigo se volvió mi favorito 💞.
+                        </p>
+                        <p>
+                            No te voy a mentir: también tuvimos nuestras peleas y momentos
+                            no tan bonitos, y a veces los dos nos equivocamos. Pero ninguna
+                            discusión me va a hacer quererte menos; al contrario, quiero que
+                            aprendamos juntos a entendernos, a calmar nuestros impulsos y a
+                            hablar las cosas con paciencia. Porque el amor de verdad también
+                            es quedarse y arreglar las cosas, no solo cuando todo está bien 🤝💗.
+                        </p>
+                        <p>
+                            Sé que ahora la distancia nos tiene lejos y que se quedaron en
+                            pausa varias salidas y sorpresas que tenía planeadas. Pero la
+                            distancia no me va a impedir quererte, serte leal y esperar tu
+                            regreso.
+                        </p>
+                        <p>
+                            Tengo clarísimo lo que quiero contigo: seguir escribiendo más
+                            páginas de nuestro libro ☀️🌙. Gracias por estos 6 meses,
+                            Luciana. Te quiero, mi peque loca. ✨
+                        </p>
+                    </div>
+                    <p class="mc-sign">— Atte: El futuro padre de tus hijos 💗</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/caja.js"></script>
+    <!-- En la CAJA no hay música de fondo: pausamos la del shell mientras estés aquí.
+         Vuelve sola al salir (cuando otra página vuelve a pedir su pista). -->
+    <script>
+        (function () {
+            try {
+                if (window.parent !== window && typeof window.parent.shellDuck === 'function') {
+                    window.parent.shellDuck(true);
+                }
+            } catch (e) {}
+        })();
+    </script>
+</body>
+</html>

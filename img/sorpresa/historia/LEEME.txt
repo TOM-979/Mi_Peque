@@ -1,0 +1,22 @@
+==================================================
+   NUESTRA HISTORIA — aquí van las FOTOS de la
+   línea de tiempo (solo fotos)
+==================================================
+
+Mete aquí las fotos de cada momento de la línea de tiempo.
+
+NOMBRES RECOMENDADOS (así yo las conecto solas):
+   momento1.jpg
+   momento2.jpg
+   momento3.jpg
+   momento4.jpg
+   momento5.jpg
+   momento6.jpg
+   ... (las que quieras)
+
+Formatos que funcionan: .jpg, .jpeg, .png, .webp
+
+Cada foto es UN momento de la línea de tiempo.
+Si les pones otro nombre, no hay problema:
+solo dime los nombres y el orden, y yo los conecto
+en js/historia.js (junto con su fecha y su texto).

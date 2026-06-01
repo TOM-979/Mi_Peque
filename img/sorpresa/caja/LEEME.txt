@@ -1,0 +1,15 @@
+================================================
+   CAJA SORPRESA — aquí va el VIDEO (o videos)
+================================================
+
+Mete aquí el/los video(s) que quieres que aparezcan
+al abrir la caja de regalo 🎁.
+
+NOMBRES RECOMENDADOS (así yo los conecto solos):
+   video1.mp4
+   video2.mp4   (opcional, si quieres un segundo)
+
+Formatos que funcionan: .mp4 (recomendado), .webm, .mov
+
+Si les pones otro nombre, no hay problema:
+solo dime cómo se llaman y yo los conecto en js/caja.js.
